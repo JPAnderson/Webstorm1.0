@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title</title>
+
+</head>
+
+<body>
+
+<form>
+    To Add:<br>
+    <input id="textBox" type="text" name="firstname"><br>
+</form>
+
+<button onclick="addToList()">Add</button>
+
+<script>
+    function addToList(){
+        var myListElement = document.getElementById("list");
+        var newListItem = document.createElement("li");
+        var listContent = document.getElementById("textBox").select();
+        newListItem.innerHTML = listContent;
+
+        myListElement.appendChild(newListItem);
+    }
+</script>
+
+<ul id="list">
+</ul>
+
+</body>
+</html>
